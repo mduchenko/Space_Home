@@ -1,0 +1,153 @@
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/roboto-v30-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* roboto-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-weight: 500;
+  src: url("../fonts/roboto-v30-latin-500.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/roboto-v30-latin-500.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-latin-700.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/roboto-v30-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* play-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Play";
+  font-weight: 400;
+  src: url("../fonts/play-v19-latin-regular.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/play-v19-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* play-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Play";
+  font-weight: 700;
+  src: url("../fonts/play-v19-latin-700.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/play-v19-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* Variable */
+:root {
+  --colors-primary-light: #ffffff;
+  --colors-primary-blue: #2b7fff;
+  --colors-primary-dark: #011c44;
+  --color-secondary-dark: #4a4a4a;
+  --color-secondary-lightdark: #747272;
+  --color-secondary: #011f4a;
+}
+/* Basic */
+body {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--colors-primary-dark);
+  line-height: normal;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+address {
+  font-style: normal;
+}
+.main-title {
+  font-family: "Play";
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--colors-primary-dark);
+}
+.main-title .accent {
+  color: var(--colors-primary-blue);
+  font-family: "Play";
+}
+
+/* #region header */
+.link {
+  text-decoration: none;
+  color: var(--colors-primary-dark);
+}
+.link:hover {
+  font-weight: 700;
+  color: var(--colors-primary-blue);
+}
+/* #endregion */
+/* ##regiion introduction */
+.introduction-title {
+  font-size: 18px;
+  font-weight: 400;
+}
+.introduction-lable {
+  font-family: "Play";
+  font-size: 140px;
+  font-weight: 700;
+  line-height: 0.81;
+  text-transform: capitalize;
+  color: var(--colors-primary-blue);
+}
+.button {
+  padding: 16px 32px;
+  border-radius: 32px;
+  font-weight: 600;
+  background-color: var(--colors-primary-blue);
+  color: var(--colors-primary-light);
+  border: none;
+}
+.button:hover {
+  background-color: var(--colors-primary-light);
+  border: 2px solid #2b7fff;
+  color: var(--colors-primary-dark);
+}
+.introduction-description {
+  font-size: 12px;
+}
+/* #end region */
+/* #region about-us */
+.about-us-description > p {
+  font-size: 22px;
+  line-height: 1.72;
+}
+.beauty {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+/* #endregion */
+
+/* #region why-mi */
+.why-mi-description {
+  line-height: 1.33;
+}
+/* #endregion */
+/* #region footer */
+footer {
+  background-color: aqua;
+}
+.link-light {
+  font-size: 16px;
+  color: var(--colors-primary-light);
+}
+.security {
+  font-size: 13px;
+  color: var(--color-secondary-lightdark);
+}
+/* #endregion */
