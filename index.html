@@ -71,7 +71,10 @@
             beauty <br />
             zone
           </p>
-          <button class="button button-introduction" type="button">
+          <button
+            class="button button-introduction modal-btn-open"
+            type="button"
+          >
             Замовити дзвінок
           </button>
           <p class="introduction-description">
@@ -120,6 +123,21 @@
                   alt="face_right"
                 />
               </div>
+              <img
+                class="star-large"
+                src="icon/star-large.svg"
+                alt="star-large"
+              />
+              <img
+                class="star-small"
+                src="icon/srar-small.svg"
+                alt="star-small"
+              />
+              <img
+                class="star-medium"
+                src="icon/star-medium.svg"
+                alt="star-medium"
+              />
             </div>
           </div>
         </div>
@@ -182,38 +200,46 @@
           <h2 class="main-title contacts-title">
             Наші <span class="accent">процедури</span>
           </h2>
-          <ul class="our-procedures">
-            <li class="our-procedures-item">
-              <article>
-                <img
-                  class="our-procedures-img"
-                  src="./img/masks-to-face.jpg"
-                  alt="masks-to-face"
-                />
-                <p>Маски для обличчя</p>
-              </article>
-            </li>
-            <li class="our-procedures-item">
-              <article>
-                <img
-                  class="our-procedures-img"
-                  src="./img/injections_to_face.jpg"
-                  alt="injections_to_face"
-                />
-                <p>Ін'єкції для обличчя</p>
-              </article>
-            </li>
-            <li class="our-procedures-item">
-              <article>
-                <img
-                  class="our-procedures-img"
-                  src="./img/cleansing_face.jpg"
-                  alt="cleansing_face"
-                />
-                <p>Очищення обличчя</p>
-              </article>
-            </li>
-          </ul>
+          <div class="our-procedures-wrapper">
+            <button class="our-procedures-btn" type="button">
+              <img width="44" height="44" src="icon/left.svg" alt="left" />
+            </button>
+            <ul class="our-procedures">
+              <li class="our-procedures-item">
+                <article>
+                  <img
+                    class="our-procedures-img"
+                    src="./img/masks-to-face.jpg"
+                    alt="masks-to-face"
+                  />
+                  <p>Маски для обличчя</p>
+                </article>
+              </li>
+              <li class="our-procedures-item">
+                <article>
+                  <img
+                    class="our-procedures-img"
+                    src="./img/injections_to_face.jpg"
+                    alt="injections_to_face"
+                  />
+                  <p>Ін'єкції для обличчя</p>
+                </article>
+              </li>
+              <li class="our-procedures-item">
+                <article>
+                  <img
+                    class="our-procedures-img"
+                    src="./img/cleansing_face.jpg"
+                    alt="cleansing_face"
+                  />
+                  <p>Очищення обличчя</p>
+                </article>
+              </li>
+            </ul>
+            <button class="our-procedures-btn" type="button">
+              <img width="44" height="44" src="icon/right.svg" alt="right" />
+            </button>
+          </div>
         </div>
       </section>
       <section class="contacts-section" id="contacts-section">
@@ -322,5 +348,19 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">close</button>
+        <h2 class="modal-title">Замовити дзвінок</h2>
+        <p>
+          Запишіться <span class="accent">безкоштовно</span> <br />
+          та отримайте подарунок
+        </p>
+        <button class="modal-button" type="button">
+          Записатись безкоштовно
+        </button>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
