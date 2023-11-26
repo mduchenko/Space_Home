@@ -153,7 +153,7 @@
               <li class="why-mi-item">
                 <div class="why-mi-item-wrap">
                   <img
-                    class="Why-mi-item-img"
+                    class="Why-mi-item-img rotation"
                     src="./icon/game-icons_materials-science.svg"
                     alt="game-icons_materials-science"
                   />
@@ -202,7 +202,9 @@
           </h2>
           <div class="our-procedures-wrapper">
             <button class="our-procedures-btn" type="button">
-              <img width="44" height="44" src="icon/left.svg" alt="left" />
+              <svg class="btn-basis btn-left" width="44px" height="44px">
+                <use href="icon/symbol-defs-lr.svg#icon-left"></use>
+              </svg>
             </button>
             <ul class="our-procedures">
               <li class="our-procedures-item">
@@ -237,7 +239,9 @@
               </li>
             </ul>
             <button class="our-procedures-btn" type="button">
-              <img width="44" height="44" src="icon/right.svg" alt="right" />
+              <svg class="btn-basis btn-left" width="44px" height="44px">
+                <use href="icon/symbol-defs-lr.svg#icon-rigt"></use>
+              </svg>
             </button>
           </div>
         </div>
@@ -258,7 +262,62 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-            <div class="contacts-form"></div>
+
+            <div class="contacts-form-container">
+              <p class="modal-description">
+                Запишіться <span class="accent">безкоштовно</span> <br />
+                та отримайте подарунок
+              </p>
+              <form
+                name="contacts-form "
+                class="contacts-form"
+                action="#"
+                method="get"
+                autocomplete="on"
+              >
+                <!-- novalidate -->
+                <!-- <label for="userName">Ім’я</label> -->
+                <div class="form-container form-container-contact">
+                  <input
+                    class="contacts-form-el"
+                    type="text"
+                    name="userName"
+                    id="userName"
+                    minlength="4"
+                    maxlength="20"
+                    placeholder="Ваше ім'я та прізвище"
+                    required
+                  />
+                  <input
+                    class="contacts-form-el"
+                    type="tel"
+                    name="usertelephone"
+                    id="usertelephone"
+                    placeholder="Ваш номер телефону"
+                    pattern="^\+[0-9]{12}"
+                    required
+                  />
+                  <input
+                    class="contacts-form-el"
+                    type="email"
+                    name="useremail"
+                    id="useremail"
+                    placeholder="Ваша електронна пошта"
+                    required
+                  />
+                  <button class="button form-button" type="submit">
+                    Записатись безкоштовно
+                  </button>
+                </div>
+
+                <p class="form-politic contact-politic">
+                  Натискаючи на кнопку я погоджуюсь з <br />
+                  <a class="contact-politic-link" href=""
+                    >політикою конфіденційності</a
+                  >
+                </p>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -350,15 +409,64 @@
     </footer>
     <div class="backdrop is-hidden">
       <div class="modal">
-        <button class="modal-btn-close" type="button">close</button>
+        <button class="modal-btn-close" type="button">
+          <img src="icon/icon.svg" alt="icon-close" />
+        </button>
         <h2 class="modal-title">Замовити дзвінок</h2>
-        <p>
+        <p class="modal-description">
           Запишіться <span class="accent">безкоштовно</span> <br />
           та отримайте подарунок
         </p>
-        <button class="modal-button" type="button">
-          Записатись безкоштовно
-        </button>
+
+        <form
+          name="contacts-form"
+          class="contacts-form"
+          action="#"
+          method="get"
+          autocomplete="on"
+        >
+          <!-- novalidate -->
+          <!-- <label for="userName">Ім’я</label> -->
+          <div class="form-container">
+            <input
+              class="contacts-form-el"
+              type="text"
+              name="userName"
+              id="userName"
+              minlength="4"
+              maxlength="20"
+              placeholder="Ваше ім'я та прізвище"
+              required
+            />
+            <input
+              class="contacts-form-el"
+              type="tel"
+              name="usertelephone"
+              id="usertelephone"
+              placeholder="Ваш номер телефону"
+              pattern="^\+[0-9]{12}"
+              required
+            />
+            <input
+              class="contacts-form-el"
+              type="email"
+              name="useremail"
+              id="useremail"
+              placeholder="Ваша електронна пошта"
+              required
+            />
+            <button class="button form-button" type="submit">
+              Записатись безкоштовно
+            </button>
+          </div>
+
+          <p class="form-politic">
+            Натискаючи на кнопку я погоджуюсь з <br />
+            <a class="contact-politic-link" href=""
+              >політикою конфіденційності</a
+            >
+          </p>
+        </form>
       </div>
     </div>
     <script src="js/script.js"></script>

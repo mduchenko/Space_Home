@@ -116,6 +116,7 @@ address {
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(5px);
   padding-top: 32px;
+  padding-bottom: 32px;
   position: absolute;
   top: 0;
   width: 100%;
@@ -141,12 +142,14 @@ address {
 .header-social-icon {
   fill: var(--colors-primary-dark);
 }
+.header-social-icon:hover {
+  fill: var(--colors-primary-light);
+}
 .link {
   text-decoration: none;
   color: var(--colors-primary-dark);
 }
 .link:hover {
-  font-weight: 700;
   color: var(--colors-primary-blue);
 }
 /* #endregion */
@@ -189,13 +192,13 @@ address {
   font-weight: 600;
   background-color: var(--colors-primary-blue);
   color: var(--colors-primary-light);
-  border: none;
+  border: 2px solid transparent;
   margin-bottom: 14px;
 }
 
 .button:hover {
   background-color: var(--colors-primary-light);
-  border: 2px solid #2b7fff;
+  border: 2px solid var(--colors-primary-blue);
   color: var(--colors-primary-dark);
 }
 .introduction-description {
@@ -298,6 +301,23 @@ address {
   justify-content: center;
   align-items: center;
 }
+.rotation {
+  animation-name: rotation;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
 /* #endregion */
 /* #region our-procedures*/
 .our-procedures-section {
@@ -345,11 +365,18 @@ address {
   align-items: center;
   background-color: transparent;
   border: none;
+  flex-shrink: 0;
 }
-.our-procedures-btn img:hover {
+.btn-basis {
+  fill: transparent;
+  stroke: var(--colors-primary-dark);
+  flex-grow: 0;
+}
+.btn-basis:hover {
   fill: var(--colors-primary-blue);
   stroke: var(--colors-primary-light);
 }
+
 /* #endregion */
 /*#region contact */
 .contacts-section {
@@ -362,10 +389,26 @@ address {
 .contacts-wrapper {
   display: flex;
   gap: 32px;
+  justify-content: center;
 }
 .contact-card {
   border-radius: 32px;
   flex-shrink: 0;
+}
+.contacts-form-container {
+  width: 423px;
+  padding: 48px 57px;
+  background-color: var(--colors-primary-dark);
+  border-radius: 32px;
+}
+.contact-politic {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-secondary-dark);
+}
+.contact-politic-link {
+  text-decoration: underline;
+  color: var(--color-secondary-dark);
 }
 /*#endregion */
 /* #region footer */
@@ -403,7 +446,6 @@ footer {
   color: var(--colors-primary-light);
 }
 .link-light:hover {
-  font-weight: 700;
   color: var(--colors-primary-blue);
 }
 .security {
@@ -426,15 +468,18 @@ footer::before {
 }
 
 /* #endregion */
+
+/* #region modal */
 .backdrop {
   position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-secondary-lightdark);
+  background-color: rgba(1, 31, 74, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.2s, visibility 0.2s;
 }
 .modal {
   position: relative;
@@ -450,6 +495,17 @@ footer::before {
   text-align: center;
   font-size: 64px;
   font-weight: 700;
+  margin-bottom: 40px;
+}
+.modal-description {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: var(--colors-primary-light);
+}
+.accent {
+  color: var(--colors-primary-blue);
 }
 .modal-btn-close {
   position: absolute;
@@ -457,14 +513,62 @@ footer::before {
   top: 42px;
   width: 40px;
   right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
 }
+
 .is-hidden {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  visibility: 0;
+  pointer-events: none;
 }
-.modal-button {
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.form-container-contact {
+  gap: 16px;
+}
+.form-button {
   padding: 16px 32px;
   background-color: var(--colors-primary-blue);
   border-radius: 32px;
   border: none;
   color: var(--colors-primary-light);
+  width: fit-content;
+  align-self: center;
+  margin-bottom: 0;
+  border: 2px solid var(--colors-primary-blue);
 }
+
+.contacts-form-el {
+  width: 100%;
+  max-width: 310px;
+  height: 52px;
+  border-radius: 32px;
+  border: 2px solid var(--color-secondary-lightdark);
+  background-color: transparent;
+}
+.contacts-form-el:focus {
+  background-color: var(--color-secondary-lightdark);
+}
+.contacts-form-el::placeholder {
+  color: var(--colors-primary-light);
+  font-size: 13px;
+  padding-left: 32px;
+}
+.form-politic {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+/* #endregion */
